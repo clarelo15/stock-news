@@ -76,7 +76,7 @@ for (key, value) in my_stocks.items():
 
         # Use twilio to send a separate message with each article's title and description to the phone number
         # Create a new list of the article's headline and description using list comprehension
-        msg = [f"{key} : {sign}{percentage_diff}%\nHeadline: {article ['title']}. \nBreif: {article ['description']}" for article in articles]
+        msg = [f"{key} : {sign}{percentage_diff}%\nHeadline: {article ['title']}. \nBrief: {article ['description']}" for article in articles]
         client = Client(TWILIO_SID, TWILIO_AUTH_TOKEN)
         # Send each article as a separate message via Twilio
         for article in msg:
